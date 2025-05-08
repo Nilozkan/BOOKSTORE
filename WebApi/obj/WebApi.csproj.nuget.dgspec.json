@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Patika.net\\BookStore\\WebAPI\\WebApi.csproj": {}
+    "D:\\Patika.net\\BookStore\\WebApi\\WebApi.csproj": {}
   },
   "projects": {
-    "D:\\Patika.net\\BookStore\\WebAPI\\WebApi.csproj": {
+    "D:\\Patika.net\\BookStore\\WebApi\\WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Patika.net\\BookStore\\WebAPI\\WebApi.csproj",
+        "projectUniqueName": "D:\\Patika.net\\BookStore\\WebApi\\WebApi.csproj",
         "projectName": "WebApi",
-        "projectPath": "D:\\Patika.net\\BookStore\\WebAPI\\WebApi.csproj",
+        "projectPath": "D:\\Patika.net\\BookStore\\WebApi\\WebApi.csproj",
         "packagesPath": "C:\\Users\\nilsu\\.nuget\\packages\\",
-        "outputPath": "D:\\Patika.net\\BookStore\\WebAPI\\obj\\",
+        "outputPath": "D:\\Patika.net\\BookStore\\WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
