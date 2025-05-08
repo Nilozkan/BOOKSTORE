@@ -56,33 +56,56 @@ namespace WebApi.Controllers
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
+           var validator = new IdValidator();
+            var result = validator.Validate(id);
+            if (!result.IsValid)
+                return BadRequest(result.Errors);
+
             var book = BookList.SingleOrDefault(book => book.Id == id);
             if (book == null)
                 return NotFound();
 
-            var viewModel = new GetBookViewModel
-            {
-                Title = book.Title,
-                Genre = GetGenreName(book.GenreId),
-                PageCount = book.PageCount,
-                PublishDate = book.PublishDate.ToString("dd.MM.yyyy")
-            };
-
-            return Ok(viewModel);
+            return Ok(book);
         }
 
         [HttpPut("{id}")]
         public IActionResult UpdateBook(int id, [FromBody] UpdateBookModel updatedBook)
         {
-            var book = BookList.SingleOrDefault(book => book.Id == id);
+            var idValidator = new IdValidator();
+            var idResult = idValidator.Validate(id);
+            if (!idResult.IsValid)
+                return BadRequest(idResult.Errors);
+
+            var validator = new UpdateBookValidator();
+            var result = validator.Validate(updatedBook);
+            if (!result.IsValid)
+                return BadRequest(result.Errors);
+
+            var book = BookList.SingleOrDefault(x => x.Id == id);
             if (book == null)
-                return NotFound();
+                return NotFound();;
 
             book.Title = updatedBook.Title;
             book.GenreId = updatedBook.GenreId;
             book.PageCount = updatedBook.PageCount;
             book.PublishDate = updatedBook.PublishDate;
 
+            return Ok(book);
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            var validator = new IdValidator();
+            var result = validator.Validate(id);
+            if (!result.IsValid)
+                return BadRequest(result.Errors);
+
+            var book = BookList.SingleOrDefault(x => x.Id == id);
+            if (book == null)
+                return NotFound();
+
+            BookList.Remove(book);
             return Ok();
         }
 

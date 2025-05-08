@@ -31,3 +31,7 @@ D:\Patika.net\BookStore\WebApi\obj\Debug\net5.0\refint\WebApi.dll
 D:\Patika.net\BookStore\WebApi\obj\Debug\net5.0\WebApi.pdb
 D:\Patika.net\BookStore\WebApi\obj\Debug\net5.0\WebApi.genruntimeconfig.cache
 D:\Patika.net\BookStore\WebApi\obj\Debug\net5.0\ref\WebApi.dll
+D:\Patika.net\BookStore\Webapi\obj\Debug\net5.0\WebApi.sourcelink.json
+D:\Patika.net\BookStore\WebAPI\bin\Debug\net5.0\FluentValidation.dll
+D:\Patika.net\BookStore\WebAPI\bin\Debug\net5.0\FluentValidation.AspNetCore.dll
+D:\Patika.net\BookStore\WebAPI\bin\Debug\net5.0\FluentValidation.DependencyInjectionExtensions.dll
